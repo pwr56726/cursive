@@ -1,0 +1,11 @@
+class FixUpForeignKeysForAlbumModel < ActiveRecord::Migration
+  def up
+    # Klucze obce tabeli albums
+    add_foreign_key :albums, :labels
+    add_foreign_key :albums, :projects
+    add_foreign_key :albums, :genres
+  end
+
+  def down
+  end
+end

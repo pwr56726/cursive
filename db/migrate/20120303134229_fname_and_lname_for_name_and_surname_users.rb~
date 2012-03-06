@@ -1,0 +1,11 @@
+class FnameAndLnameForNameAndSurnameUsers < ActiveRecord::Migration
+  def up
+    t.rename :name, :fname
+    t.rename :surname, :lname
+  end
+
+  def down
+    t.rename :lname, :surname
+    t.rename :fname, :name
+  end
+end

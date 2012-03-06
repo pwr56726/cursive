@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fname:</b>
+  <%= @musician.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%= @musician.lname %>
+</p>
+
+<p>
+  <b>Birth date:</b>
+  <%= @musician.birth_date %>
+</p>
+
+<p>
+  <b>Death date:</b>
+  <%= @musician.death_date %>
+</p>
+
+<p>
+  <b>Projects:</b>
+  <ul>
+    <% @musician.projects.each do |project| %>
+      <li><%=project.name %></li>
+    <% end %>
+  </ul>
+</b>
+
+
+<%= link_to 'Edit', edit_musician_path(@musician) %> |
+<%= link_to 'Back', musicians_path %>

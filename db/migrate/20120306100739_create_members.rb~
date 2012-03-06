@@ -1,0 +1,10 @@
+class CreateMembers < ActiveRecord::Migration
+  def change
+    create_table :members do |t|
+      t.integer :project_id
+      t.integer :musician_id
+
+      t.timestamps
+    end
+  end
+end

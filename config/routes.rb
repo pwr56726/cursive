@@ -1,4 +1,16 @@
 Cursive::Application.routes.draw do
+  resources :users
+
+  resources :musicians
+
+  resources :projects
+
+  resources :genres
+
+  resources :labels
+
+  resources :albums
+
   get "site/index"
 
   # The priority is based upon order of creation:
